@@ -18,6 +18,7 @@ function Header() {
         </span>{" "}
         Blog
       </Link>
+
       <form>
         <TextInput
           type="text"
@@ -26,6 +27,7 @@ function Header() {
           className="hidden md:inline"
         />
       </form>
+
       <Button className="w-12 h-10 md:hidden" color="gray" pill>
         <AiOutlineSearch className="w-6 h-6 text-gray-500" />
       </Button>
