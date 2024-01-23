@@ -48,8 +48,6 @@ function SignUp() {
 
       if (res.ok) {
         navigate("/sign-in");
-      } else {
-        setErrorMessage(data.message);
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -78,23 +76,6 @@ function SignUp() {
           <h2 className="text-3xl font-semibold text-white">
             Sign Up to Get Started
           </h2>
-
-          <div>
-            <Label
-              htmlFor="email"
-              value="Your E-mail"
-              className="text-white mb-2"
-            />
-
-            <TextInput
-              id="email"
-              type="email"
-              icon={HiMail}
-              placeholder="john@email.com"
-              sizing="lg"
-              onChange={handleChange}
-            />
-          </div>
           <div>
             <Label
               htmlFor="username"
@@ -111,6 +92,23 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
+          <div>
+            <Label
+              htmlFor="email"
+              value="Your E-mail"
+              className="text-white mb-2"
+            />
+
+            <TextInput
+              id="email"
+              type="email"
+              icon={HiMail}
+              placeholder="john@email.com"
+              sizing="lg"
+              onChange={handleChange}
+            />
+          </div>
+
           <div>
             <Label
               htmlFor="password"
