@@ -7,6 +7,7 @@ import {
   HiExclamationCircle,
 } from "react-icons/hi";
 import { Link, useNavigate } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 function SignUp() {
   const [formData, setFormData] = useState({});
@@ -141,6 +142,7 @@ function SignUp() {
               "Sign Up"
             )}
           </Button>
+          <OAuth />
         </form>
 
         <div className="mt-5 flex items-center gap-2 justify-center">

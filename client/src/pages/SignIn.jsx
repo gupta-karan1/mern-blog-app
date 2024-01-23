@@ -8,6 +8,7 @@ import {
   signInStart,
 } from "../../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import OAuth from "../components/OAuth";
 
 function SignIn() {
   const [formData, setFormData] = useState({});
@@ -123,6 +124,7 @@ function SignIn() {
               "Sign In"
             )}
           </Button>
+          <OAuth />
         </form>
 
         <div className="mt-5 flex items-center gap-2 justify-center">
