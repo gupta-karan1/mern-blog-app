@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 function FooterComp() {
   return (
     <Footer container>
-      <div className="w-full">
+      <div className="w-full mt-10">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 gap-10">
           <div>
             <Link

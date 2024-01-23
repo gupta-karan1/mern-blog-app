@@ -59,13 +59,12 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 place-content-center p-10 md:p-20 bg-gradient-to-b from-indigo-500 to-pink-400 ">
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 place-content-center p-2 md:p-20  ">
       {/* left */}
-      <div>
-        <h2 className="text-6xl xl:text-9xl font-black  text-white mb-10">
-          YouBlog
-        </h2>{" "}
-        <p className="text-white text-xl lg:text-3xl">
+
+      <div className="bg-gradient-to-r from-indigo-500  to-pink-500 p-5 md:p-10 w-full h-full rounded-3xl self-center text-white">
+        <span className="text-6xl xl:text-8xl font-black ">YouBlog</span>{" "}
+        <p className=" text-xl lg:text-3xl mt-10">
           YouBlog is a blog platform where you can share your thoughts and ideas
           with the world. <br />
         </p>
@@ -73,16 +72,13 @@ function SignUp() {
 
       {/* right */}
       <div>
-        <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-          <h2 className="text-3xl font-semibold text-white">
-            Sign Up to Get Started
-          </h2>
+        <form
+          className="flex flex-col gap-5 p-5 md:p-0"
+          onSubmit={handleSubmit}
+        >
+          <h2 className="text-3xl font-semibold ">Sign Up to Get Started</h2>
           <div>
-            <Label
-              htmlFor="username"
-              value="Your Username"
-              className="text-white mb-2"
-            />
+            <Label htmlFor="username" value="Your Username" className=" mb-2" />
 
             <TextInput
               id="username"
@@ -94,11 +90,7 @@ function SignUp() {
             />
           </div>
           <div>
-            <Label
-              htmlFor="email"
-              value="Your E-mail"
-              className="text-white mb-2"
-            />
+            <Label htmlFor="email" value="Your E-mail" className=" mb-2" />
 
             <TextInput
               id="email"
@@ -111,11 +103,7 @@ function SignUp() {
           </div>
 
           <div>
-            <Label
-              htmlFor="password"
-              value="Your Password"
-              className="text-white mb-2"
-            />
+            <Label htmlFor="password" value="Your Password" className=" mb-2" />
 
             <TextInput
               id="password"
@@ -146,10 +134,10 @@ function SignUp() {
         </form>
 
         <div className="mt-5 flex items-center gap-2 justify-center">
-          <p className="text-white">Already have an account? </p>
+          <p className="">Already have an account? </p>
           <Link
             to="/sign-in"
-            className="text-white font-semibold underline-offset-2 underline"
+            className=" font-semibold underline-offset-2 underline"
           >
             Sign In
           </Link>
