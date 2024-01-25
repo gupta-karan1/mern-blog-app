@@ -103,7 +103,8 @@ function SignIn() {
 
           <Button
             type="submit"
-            gradientMonochrome={"purple"}
+            gradientDuoTone={"purpleToPink"}
+            size={"lg"}
             pill
             className="drop-shadow-md"
             disabled={loading}

@@ -51,8 +51,8 @@ function OAuth() {
       pill
       className="w-full"
       outline
-      gradientMonochrome={"purple"}
-      size="sm"
+      gradientDuoTone={"purpleToPink"}
+      size={"lg"}
       onClick={handleGoogleClick}
     >
       <AiFillGoogleCircle className=" w-6 h-6 mr-2" />
