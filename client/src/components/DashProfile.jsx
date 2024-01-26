@@ -29,7 +29,7 @@ import {
 import { useDispatch } from "react-redux";
 
 function DashProfile() {
-  const { currentUser, error } = useSelector((state) => state.user);
+  const { currentUser, error, loading } = useSelector((state) => state.user);
   const [imageFile, setImageFile] = useState(null);
   const [imageFileUrl, setImageFileUrl] = useState(null);
   const [imageFileUploadProgress, setImageFileUploadProgress] = useState(null);
@@ -310,8 +310,9 @@ function DashProfile() {
           pill
           className="drop-shadow-md"
           size={"lg"}
+          disabled={loading || imageFileUploading}
         >
-          Update{" "}
+          {loading ? "Loading..." : "Update"}
         </Button>
       </form>
 
