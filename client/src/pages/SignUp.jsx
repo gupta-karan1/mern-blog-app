@@ -59,11 +59,11 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 place-content-center p-2 md:p-20  ">
+    <div className="min-h-screen max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 place-content-center p-2 md:p-20  ">
       {/* left */}
 
-      <div className="bg-gradient-to-r from-indigo-500  to-pink-500 p-5 md:p-10 w-full h-full rounded-3xl self-center text-white">
-        <span className="text-6xl xl:text-8xl font-black ">YouBlog</span>{" "}
+      <div className="bg-gradient-to-r from-indigo-500  to-pink-500 p-5 lg:p-10 w-full h-full rounded-3xl self-center text-white">
+        <span className="text-5xl xl:text-8xl font-black ">YouBlog</span>{" "}
         <p className=" text-xl lg:text-3xl mt-10">
           YouBlog is a blog platform where you can share your thoughts and ideas
           with the world. <br />
