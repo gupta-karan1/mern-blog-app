@@ -24,6 +24,7 @@ import {
   deleteUserStart,
   deleteUserSuccess,
   deleteUserFailure,
+  signoutSuccess,
 } from "../../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 
@@ -184,6 +185,26 @@ function DashProfile() {
     }
   };
 
+  const handleSignout = async () => {
+    try {
+      const res = await fetch("/api/user/signout", {
+        method: "POST",
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message);
+        // console.log(data.message);
+      } else {
+        dispatch(signoutSuccess());
+      }
+    } catch (error) {
+      // console.log(error.message);
+      throw new Error(error.message);
+    }
+  };
+
   return (
     <div className="max-w-lg mx-auto p-3 w-full">
       <h1 className="my-7 text-center font-semibold text-3xl">My Profile</h1>
@@ -325,7 +346,13 @@ function DashProfile() {
       )}
 
       <div className="flex mt-10 justify-between flex-col md:flex-row gap-5">
-        <Button pill gradientDuoTone={"purpleToPink"} size={"lg"} outline>
+        <Button
+          pill
+          gradientDuoTone={"purpleToPink"}
+          size={"lg"}
+          outline
+          onClick={handleSignout}
+        >
           Sign Out
         </Button>
         <Button
